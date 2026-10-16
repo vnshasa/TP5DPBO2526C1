@@ -89,7 +89,7 @@ File SQL disediakan di [**`db_people.sql`**](db_people.sql). File tersebut membu
 
 > **Penting:** file `db_people.sql` menjalankan `DROP TABLE IF EXISTS person`. Jika diimpor ulang, tabel `person` akan dibuat ulang dan data awal dimasukkan lagi. Backup atau ekspor data terlebih dahulu jika ada data yang ingin dipertahankan. Perintah tersebut tidak menghapus database lain pada server MySQL.
 
-## 🔄 Alur Program
+## Alur Program
 
 ### 1. Menampilkan data — Read
 
