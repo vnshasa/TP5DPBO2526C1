@@ -87,8 +87,6 @@ Database yang digunakan bernama **`db_people`** dengan tabel utama **`person`**.
 
 File SQL disediakan di [**`db_people.sql`**](db_people.sql). File tersebut membuat database `db_people`, membuat ulang tabel `person`, lalu memasukkan 10 data awal dengan ID `KMN001` sampai `KMN010`.
 
-> **Penting:** file `db_people.sql` menjalankan `DROP TABLE IF EXISTS person`. Jika diimpor ulang, tabel `person` akan dibuat ulang dan data awal dimasukkan lagi. Backup atau ekspor data terlebih dahulu jika ada data yang ingin dipertahankan. Perintah tersebut tidak menghapus database lain pada server MySQL.
-
 ## Alur Program
 
 ### 1. Menampilkan data — Read
@@ -158,9 +156,8 @@ File Connector/J disimpan pada `PeopleData/lib/mysql-connector-j-26.7.0.jar`. Ji
 4. Buka `PeopleData/PeopleMenu.java`, lalu jalankan method `main()` melalui ikon Run di samping deklarasinya.
 5. Aplikasi akan menampilkan data dari MySQL jika konfigurasi sudah benar.
 
-Konfigurasi koneksi bawaan pada `Database.java` menggunakan URL `jdbc:mysql://localhost:3306/db_people`, username `root`, dan password kosong. Sesuaikan nilai tersebut jika konfigurasi MySQL di komputer berbeda.
-
 ## Dokumentasi Pengujian
+
 ### READ — Tampilan Awal
 
 Tampilan awal memperlihatkan form kosong dan 10 data anggota yang dibaca dari database MySQL.
@@ -169,7 +166,7 @@ Tampilan awal memperlihatkan form kosong dan 10 data anggota yang dibaca dari da
 
 ### CREATE — Menambahkan Anggota
 
-GIF berikut memperlihatkan pengisian form serta proses penambahan data menggunakan tombol **Add**. Setelah proses berhasil, data akan muncul pada tabel.
+Memperlihatkan pengisian form serta proses penambahan data menggunakan tombol **Add**. Setelah proses berhasil, data akan muncul pada tabel.
 
 ![Demo Create — Menambahkan Anggota](Dokumentasi/02-create.gif)
 
@@ -215,36 +212,5 @@ Gambar berikut memperlihatkan data anggota pada tabel `person` melalui phpMyAdmi
 
 ![Isi tabel person di phpMyAdmin](Dokumentasi/09-bukti-tabel-database.png)
 
-## Struktur Repository
-
-```text
-TP5DPBO2526C1/
-├── Dokumentasi/
-│   ├── 01-read-tampilan-awal.png
-│   ├── 02-create.gif
-│   ├── 02-create.mp4                     (rekaman asli)
-│   ├── 03-update.gif
-│   ├── 03-update.mp4                     (rekaman asli)
-│   ├── 04-delete.gif
-│   ├── 04-delete.mp4                     (rekaman asli)
-│   ├── 05-validasi-insert-kolom-kosong.gif
-│   ├── 05-validasi-insert-kolom-kosong.mp4 (rekaman asli)
-│   ├── 06-validasi-update-kolom-kosong.gif
-│   ├── 06-validasi-update-kolom-kosong.mp4 (rekaman asli)
-│   ├── 07-validasi-id-duplikat.gif
-│   ├── 07-validasi-id-duplikat.mp4       (rekaman asli)
-│   ├── 08-validasi-tahun-bukan-angka.gif
-│   ├── 08-validasi-tahun-bukan-angka.mp4 (rekaman asli)
-│   └── 09-bukti-tabel-database.png
-├── PeopleData/
-│   ├── lib/
-│   │   └── mysql-connector-j-26.7.0.jar
-│   ├── Database.java
-│   ├── Person.java
-│   ├── PeopleMenu.java
-│   └── PeopleMenu.form
-├── db_people.sql
-└── README.md
-```
 
 TP5 mengembangkan aplikasi PeopleData dari TP4 dengan menghubungkan seluruh operasi CRUD ke database MySQL. Java Swing digunakan untuk antarmuka, JDBC untuk komunikasi dengan database, dan validasi membantu menjaga agar data yang disimpan sesuai aturan program. GIF animasi pada README memperlihatkan pengujian utama agar alur aplikasi dapat diperiksa langsung di halaman repository.
