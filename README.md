@@ -206,11 +206,17 @@ Pengujian ini memperlihatkan respons aplikasi ketika kolom Tahun Lahir diisi tek
 
 ![Validasi Tahun Lahir Bukan Angka](Dokumentasi/08-validasi-tahun-bukan-angka.gif)
 
+### Validasi — Tahun Lahir di Luar Rentang
+
+Jika tahun lahir kurang dari 1900 atau melebihi tahun berjalan, aplikasi menampilkan dialog error dan menolak input tersebut.
+
+![Demo validasi tahun lahir di luar rentang](Dokumentasi/09-validasi-tahun-di-luar-rentang.gif)
+
 ### BUKTI DATABASE — Tabel `person`
 
 Gambar berikut memperlihatkan data anggota pada tabel `person` melalui phpMyAdmin.
 
-![Isi tabel person di phpMyAdmin](Dokumentasi/09-bukti-tabel-database.png)
+![Isi tabel person di phpMyAdmin](Dokumentasi/10-bukti-tabel-database.png)
 
 
 TP5 mengembangkan aplikasi PeopleData dari TP4 dengan menghubungkan seluruh operasi CRUD ke database MySQL. Java Swing digunakan untuk antarmuka, JDBC untuk komunikasi dengan database, dan validasi membantu menjaga agar data yang disimpan sesuai aturan program. GIF animasi pada README memperlihatkan pengujian utama agar alur aplikasi dapat diperiksa langsung di halaman repository.
