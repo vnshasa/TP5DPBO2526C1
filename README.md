@@ -8,11 +8,11 @@
 
 ---
 
-## 🤝 Pernyataan Kejujuran
+## Janji
 
-Saya, Vanisha Septiani Auliaputri dengan NIM 2510735, mengerjakan Tugas Praktikum 5 pada mata kuliah Desain dan Pemrograman Berorientasi Objek dengan berusaha mengikuti ketentuan tugas yang diberikan. Saya menyatakan tidak melakukan kecurangan yang dilarang dalam pelaksanaan tugas ini. Semoga tugas ini menjadi bagian dari proses belajar yang bermanfaat. Aamiin.
+Saya Vanisha Septiani Auliaputri dengan NIM 2510735 mengerjakan Tugas Praktikum 5 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
-## 🛠️ Desain Program
+## Desain Program
 
 **PeopleData** adalah aplikasi desktop untuk mengelola data anggota komunitas koding. Antarmuka aplikasi dibuat menggunakan Java Swing, sedangkan MySQL digunakan untuk menyimpan data. Pada TP5, program TP4 dikembangkan agar operasi Create, Read, Update, dan Delete tidak lagi bergantung pada penyimpanan data di `ArrayList`, tetapi dilakukan terhadap database melalui JDBC.
 
@@ -73,7 +73,7 @@ Class `Database` menangani koneksi JDBC ke MySQL dan eksekusi query SQL.
 
 Versi query berparameter memisahkan nilai dari teks SQL, sehingga teks seperti nama yang mengandung tanda petik dapat diproses dengan benar dan risiko SQL injection dapat dikurangi.
 
-## 🗄️ Desain Database
+## Desain Database
 
 Database yang digunakan bernama **`db_people`** dengan tabel utama **`person`**. Struktur kolom disesuaikan dengan atribut aplikasi TP4; kolom `email` pada contoh modul diganti dengan atribut tambahan `keahlian`.
 
@@ -89,7 +89,7 @@ File SQL disediakan di [**`db_people.sql`**](db_people.sql). File tersebut membu
 
 > **Penting:** file `db_people.sql` menjalankan `DROP TABLE IF EXISTS person`. Jika diimpor ulang, tabel `person` akan dibuat ulang dan data awal dimasukkan lagi. Backup atau ekspor data terlebih dahulu jika ada data yang ingin dipertahankan. Perintah tersebut tidak menghapus database lain pada server MySQL.
 
-## 🔄 Alur Program
+## Alur Program
 
 ### 1. Menampilkan data — Read
 
@@ -115,7 +115,7 @@ Setelah memilih baris dan menekan **Delete**, pengguna diminta mengonfirmasi pen
 
 Tombol **Cancel** mengosongkan text field, mengembalikan kategori ke `???`, mengatur slider ke nilai awal 5, menghapus pilihan baris, dan mengembalikan tombol ke mode Add.
 
-## 🛡️ Validasi dan Dialog Error
+## Validasi dan Dialog Error
 
 Program melakukan validasi sebelum mengirim data ke database.
 
@@ -130,7 +130,7 @@ Program melakukan validasi sebelum mengirim data ke database.
 
 Slider Keahlian selalu memiliki nilai 1–10 dengan nilai awal 5, sehingga tidak memerlukan validasi input kosong seperti text field.
 
-## ▶️ Cara Menjalankan Program
+## Cara Menjalankan Program
 
 ### Persiapan database
 
@@ -160,10 +160,7 @@ File Connector/J disimpan pada `PeopleData/lib/mysql-connector-j-26.7.0.jar`. Ji
 
 Konfigurasi koneksi bawaan pada `Database.java` menggunakan URL `jdbc:mysql://localhost:3306/db_people`, username `root`, dan password kosong. Sesuaikan nilai tersebut jika konfigurasi MySQL di komputer berbeda.
 
-## 🎬 Dokumentasi Pengujian
-
-Bagian dokumentasi berikut menggunakan **GIF animasi** agar setiap demo bergerak dan tampil langsung di halaman README, tanpa harus membuka tautan video satu per satu. Format ini mengikuti bentuk dokumentasi inline seperti yang digunakan pada contoh referensi praktikum. GIF tidak menyertakan audio; rekaman MP4 asli tetap dapat disimpan sebagai arsip di folder `Dokumentasi`.
-
+## Dokumentasi Pengujian
 ### READ — Tampilan Awal
 
 Tampilan awal memperlihatkan form kosong dan 10 data anggota yang dibaca dari database MySQL.
@@ -218,7 +215,7 @@ Gambar berikut memperlihatkan data anggota pada tabel `person` melalui phpMyAdmi
 
 ![Isi tabel person di phpMyAdmin](Dokumentasi/09-bukti-tabel-database.png)
 
-## 📁 Struktur Repository
+## Struktur Repository
 
 ```text
 TP5DPBO2526C1/
@@ -249,7 +246,5 @@ TP5DPBO2526C1/
 ├── db_people.sql
 └── README.md
 ```
-
-## Penutup
 
 TP5 mengembangkan aplikasi PeopleData dari TP4 dengan menghubungkan seluruh operasi CRUD ke database MySQL. Java Swing digunakan untuk antarmuka, JDBC untuk komunikasi dengan database, dan validasi membantu menjaga agar data yang disimpan sesuai aturan program. GIF animasi pada README memperlihatkan pengujian utama agar alur aplikasi dapat diperiksa langsung di halaman repository.
